@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nội Thất Mạnh An - 7 Năm Kiến Tạo Không Gian Đẳng Cấp</title>
+    <link rel="icon" type="image/x-icon" href="Data/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        html { scroll-behavior: smooth; }
+        :root { --gold: #b89356; }
+        .text-gold { color: var(--gold); }
+        .bg-gold { background-color: var(--gold); }
+        
+        /* Slider height responsive */
+        .hero-swiper { height: 60vh; }
+        @media (min-width: 768px) { .hero-swiper { height: 85vh; } }
+        
+        .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+        
+        /* Desktop Dropdown */
+        @media (min-width: 1024px) {
+            .dropdown:hover .dropdown-menu { display: block; opacity: 1; transform: translateY(0); }
+        }
+        .dropdown-menu { 
+            display: none; opacity: 0; transform: translateY(10px);
+            transition: all 0.3s ease;
+        }
+
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            transition: transform 0.4s ease-in-out;
+            transform: translateX(100%);
+        }
+        #mobile-menu.active { transform: translateX(0); }
+
+        /* Hide Scrollbar */
+        body.menu-open { overflow: hidden; }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+
+    <!-- HEADER -->
+    <header class="fixed w-full z-[100] bg-white shadow-md">
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#home" class="flex items-center">
+                <img src="Data/Logo.png" alt="Mạnh An Logo" class="h-12 md:h-20 w-auto object-contain">
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex space-x-6 items-center font-bold uppercase text-[11px] tracking-wider">
+                <a href="#home" class="hover:text-gold transition">Trang chủ</a>
+                <a href="#about" class="hover:text-gold transition">Giới thiệu</a>
+                
+                <div class="relative dropdown">
+                    <a href="#interior-services" class="hover:text-gold transition flex items-center gap-1 cursor-pointer uppercase">
+                        Thiết kế nội thất <i class="fas fa-chevron-down text-[10px]"></i>
+                    </a>
+                    <div class="dropdown-menu absolute top-full left-0 w-[350px] bg-white shadow-xl border-t-2 border-gold">
+                        <a href="#service-shop" class="block px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-gold border-b border-gray-100 normal-case font-semibold">THIẾT KẾ SHOP - BÁO GIÁ THIẾT KẾ THI CÔNG NỘI THẤT</a>
+                        <a href="#service-restaurant" class="block px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-gold border-b border-gray-100 normal-case font-semibold">THIẾT KẾ NHÀ HÀNG ĐẸP - THI CÔNG TRỌN GÓI</a>
+                        <a href="#service-consult" class="block px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-gold border-b border-gray-100 normal-case font-semibold">DỊCH VỤ TƯ VẤN THIẾT KẾ TOÀN DIỆN A-Z</a>
+                        <a href="#service-trend" class="block px-6 py-3 text-gray-700 hover:bg-gray-50 hover:text-gold normal-case font-semibold">XU HƯỚNG MẪU THIẾT KẾ THỊNH HÀNH NHẤT</a>
+                    </div>
+                </div>
+
+                <a href="#process" class="hover:text-gold transition">Quy trình làm việc</a>
+                <a href="#projects" class="hover:text-gold transition">Dự án</a>
+            </nav>
+            
+            <!-- Right Actions -->
+            <div class="flex items-center gap-4">
+                <a href="tel:0779499624" class="hidden sm:flex bg-gold text-white px-4 py-2 rounded font-bold text-xs hover:bg-black transition items-center">
+                    <i class="fas fa-phone-alt mr-2"></i>0779.499.624
+                </a>
+                <!-- Mobile Toggle Button -->
+                <button id="menu-toggle" class="lg:hidden text-2xl text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU OVERLAY -->
+    <div id="mobile-menu" class="fixed inset-0 z-[110] bg-white lg:hidden overflow-y-auto">
+        <div class="p-6">
+            <div class="flex justify-between items-center mb-10">
+                <img src="Data/Logo.png" class="h-12">
+                <button id="menu-close" class="text-3xl text-gray-500">&times;</button>
+            </div>
+            
+            <ul class="space-y-6 font-bold uppercase text-sm tracking-widest">
+                <li><a href="#home" class="mobile-link block py-2 border-b border-gray-50">Trang chủ</a></li>
+                <li><a href="#about" class="mobile-link block py-2 border-b border-gray-50">Giới thiệu</a></li>
+                <li>
+                    <div class="flex justify-between items-center py-2 border-b border-gray-50" onclick="toggleSubMenu()">
+                        <span>Thiết kế nội thất</span>
+                        <i class="fas fa-chevron-down text-xs"></i>
+                    </div>
+                    <ul id="mobile-sub-menu" class="hidden mt-4 pl-4 space-y-4 normal-case font-semibold text-gray-600 text-xs">
+                        <li><a href="#service-shop" class="mobile-link block border-l-2 border-gold pl-3">THIẾT KẾ SHOP - BÁO GIÁ THIẾT KẾ THI CÔNG NỘI THẤT CỬA HÀNG</a></li>
+                        <li><a href="#service-restaurant" class="mobile-link block border-l-2 border-gold pl-3">THIẾT KẾ NHÀ HÀNG ĐẸP - THI CÔNG NỘI THẤT TRỌN GÓI</a></li>
+                        <li><a href="#service-consult" class="mobile-link block border-l-2 border-gold pl-3">DỊCH VỤ TƯ VẤN THIẾT KẾ NHÀ HÀNG TOÀN DIỆN A-Z</a></li>
+                        <li><a href="#service-trend" class="mobile-link block border-l-2 border-gold pl-3">XU HƯỚNG MẪU THIẾT KẾ NHÀ HÀNG ĐẸP THỊNH HÀNH NHẤT</a></li>
+                    </ul>
+                </li>
+                <li><a href="#process" class="mobile-link block py-2 border-b border-gray-50">Quy trình</a></li>
+                <li><a href="#projects" class="mobile-link block py-2 border-b border-gray-50">Dự án</a></li>
+            </ul>
+
+            <div class="mt-10 space-y-4">
+                <a href="tel:0779499624" class="flex items-center justify-center gap-3 bg-gold text-white p-4 rounded-lg font-bold">
+                    <i class="fas fa-phone-alt"></i> GỌI 0779.499.624
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT (Giữ nguyên các Section như yêu cầu trước) -->
+    <main>
+        <!-- Home Slide -->
+        <section id="home" class="pt-16 md:pt-20">
+            <div class="swiper hero-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="Data/SL1.jpg" alt="Slide 1"></div>
+                    <div class="swiper-slide"><img src="Data/SL2.jpg" alt="Slide 2"></div>
+                    <div class="swiper-slide"><img src="Data/SL3.jpg" alt="Slide 3"></div>
+                    <div class="swiper-slide"><img src="Data/SL4.jpg" alt="Slide 4"></div>
+                    <div class="swiper-slide"><img src="Data/SL5.jpg" alt="Slide 5"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <!-- About Section (Giới thiệu Mạnh An) -->
+        <section id="about" class="py-12 md:py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-10">
+                    <h1 class="text-2xl md:text-4xl font-extrabold mb-4 uppercase">Mạnh An Design - 7 Năm Uy Tín</h1>
+                    <p class="text-gray-600 text-sm md:text-base italic max-w-2xl mx-auto">Thiết kế & Thi công nội thất trọn gói chuyên nghiệp cho Spa, Showroom, Nhà hàng...</p>
+                </div>
+                <!-- ... các khối Nhân lực, Vật lực giữ nguyên ... -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-6 bg-white shadow-sm rounded border-l-4 border-gold">
+                        <h3 class="font-bold text-gold uppercase mb-2 text-sm">Về nhân lực & Vật lực</h3>
+                        <p class="text-xs text-gray-500 leading-relaxed">20 thợ mộc tay nghề cao, 5 kiến trúc sư giàu kinh nghiệm. Hệ thống nhà máy 5.000m2 tại 2 miền Bắc - Nam.</p>
+                    </div>
+                    <div class="p-6 bg-gold text-white shadow-sm rounded">
+                        <h3 class="font-bold uppercase mb-2 text-sm">Liên hệ ngay</h3>
+                        <p class="text-[10px] leading-tight opacity-90">HN: Số 48 ngõ 99 Kiều Mai, Q. Bắc Từ Liêm<br>HCM: 201/2 Mã Lò, Bình Tân</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Thiết kế nội thất (Service Section) -->
+        <section id="interior-services" class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-2xl font-bold text-center mb-12 uppercase tracking-widest border-b-2 border-gold inline-block mx-auto">Thiết kế nội thất</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div id="service-shop" class="p-6 bg-white border border-gray-100 rounded-xl hover:shadow-lg transition">
+                        <span class="text-gold font-black text-2xl">01</span>
+                        <h4 class="font-bold mt-2 uppercase text-sm">Thiết kế Shop - Báo giá thi công cửa hàng</h4>
+                    </div>
+                    <div id="service-restaurant" class="p-6 bg-white border border-gray-100 rounded-xl hover:shadow-lg transition">
+                        <span class="text-gold font-black text-2xl">02</span>
+                        <h4 class="font-bold mt-2 uppercase text-sm">Thiết kế nhà hàng đẹp - Thi công trọn gói</h4>
+                    </div>
+                    <div id="service-consult" class="p-6 bg-white border border-gray-100 rounded-xl hover:shadow-lg transition">
+                        <span class="text-gold font-black text-2xl">03</span>
+                        <h4 class="font-bold mt-2 uppercase text-sm">Tư vấn thiết kế nhà hàng toàn diện A-Z</h4>
+                    </div>
+                    <div id="service-trend" class="p-6 bg-white border border-gray-100 rounded-xl hover:shadow-lg transition">
+                        <span class="text-gold font-black text-2xl">04</span>
+                        <h4 class="font-bold mt-2 uppercase text-sm">Xu hướng mẫu thiết kế thịnh hành nhất</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quy trình 6 bước -->
+        <section id="process" class="py-16 bg-zinc-900 text-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-xl font-bold text-center mb-10 uppercase">Quy trình làm việc</h2>
+                <div class="grid grid-cols-2 lg:grid-cols-6 gap-4 text-center">
+                    <div class="p-2">
+                        <div class="w-10 h-10 bg-gold rounded-full flex items-center justify-center mx-auto mb-2 text-sm font-bold">1</div>
+                        <p class="text-[10px] uppercase font-bold">Tiếp nhận</p>
+                    </div>
+                    <div class="p-2">
+                        <div class="w-10 h-10 bg-gold rounded-full flex items-center justify-center mx-auto mb-2 text-sm font-bold">2</div>
+                        <p class="text-[10px] uppercase font-bold">Khảo sát</p>
+                    </div>
+                    <div class="p-2">
+                        <div class="w-10 h-10 bg-gold rounded-full flex items-center justify-center mx-auto mb-2 text-sm font-bold">3</div>
+                        <p class="text-[10px] uppercase font-bold">Thiết kế</p>
+                    </div>
+                    <div class="p-2">
+                        <div class="w-10 h-10 bg-gold rounded-full flex items-center justify-center mx-auto mb-2 text-sm font-bold">4</div>
+                        <p class="text-[10px] uppercase font-bold">Ký HĐ</p>
+                    </div>
+                    <div class="p-2">
+                        <div class="w-10 h-10 bg-gold rounded-full flex items-center justify-center mx-auto mb-2 text-sm font-bold">5</div>
+                        <p class="text-[10px] uppercase font-bold">Sản xuất</p>
+                    </div>
+                    <div class="p-2">
+                        <div class="w-10 h-10 bg-gold rounded-full flex items-center justify-center mx-auto mb-2 text-sm font-bold">6</div>
+                        <p class="text-[10px] uppercase font-bold">Bàn giao</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dự án (DA01-DA07) -->
+        <section id="projects" class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <img src="Data/DA01.jpg" class="w-full h-64 object-cover rounded shadow">
+                    <img src="Data/DA02.jpg" class="w-full h-64 object-cover rounded shadow">
+                    <img src="Data/DA03.jpg" class="w-full h-64 object-cover rounded shadow">
+                    <img src="Data/DA04.jpg" class="w-full h-64 object-cover rounded shadow">
+                    <img src="Data/DA05.jpg" class="w-full h-64 object-cover rounded shadow">
+                    <img src="Data/DA06.jpg" class="w-full h-64 object-cover rounded shadow">
+                    <img src="Data/DA07.jpg" class="w-full h-64 object-cover rounded shadow sm:col-span-2 lg:col-span-1">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (Giữ nguyên) -->
+    <footer class="bg-zinc-900 text-white py-10 px-6">
+        <div class="container mx-auto text-center space-y-4">
+            <img src="Data/Logo.png" class="h-12 mx-auto">
+            <p class="text-[10px] text-zinc-500 uppercase tracking-widest">© 2024 Manhandesign.com</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Swiper initialization
+        const swiper = new Swiper('.hero-swiper', {
+            loop: true,
+            autoplay: { delay: 4000 },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            effect: 'fade'
+        });
+
+        // Mobile Menu Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const body = document.body;
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            body.classList.add('menu-open');
+        });
+
+        const closeMenu = () => {
+            mobileMenu.classList.remove('active');
+            body.classList.remove('menu-open');
+        };
+
+        menuClose.addEventListener('click', closeMenu);
+        mobileLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        // Mobile Submenu Accordion
+        function toggleSubMenu() {
+            const subMenu = document.getElementById('mobile-sub-menu');
+            subMenu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
