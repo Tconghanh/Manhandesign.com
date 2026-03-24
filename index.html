@@ -84,8 +84,10 @@
                     </div>
                     <ul id="mobile-sub-menu" class="hidden mt-4 pl-4 space-y-4 normal-case font-semibold text-gray-600 text-[11px]">
                         <li><a href="javascript:void(0)" onclick="openServiceModal('jewelry')" class="block border-l-2 border-gold pl-3 text-gold font-bold">THIẾT KẾ SHOP TRANG SỨC, TIỆM VÀNG...</a></li>
-                        <li><a href="javascript:void(0)" onclick="openServiceModal('shop')" class="block border-l-2 border-gold pl-3">THIẾT KẾ SHOP - BÁO GIÁ THIẾT KẾ...</a></li>
-                        <li><a href="javascript:void(0)" onclick="openServiceModal('restaurant')" class="block border-l-2 border-gold pl-3">THIẾT KẾ NHÀ HÀNG ĐẸP...</a></li>
+                        <li><a href="javascript:void(0)" onclick="openServiceModal('shop')" class="block border-l-2 border-gold pl-3">THIẾT KẾ SHOP - BÁO GIÁ THIẾT KẾ THI CÔNG...</a></li>
+                        <li><a href="javascript:void(0)" onclick="openServiceModal('restaurant')" class="block border-l-2 border-gold pl-3">THIẾT KẾ NHÀ HÀNG ĐẸP - THI CÔNG TRỌN GÓI...</a></li>
+                        <li><a href="javascript:void(0)" onclick="openServiceModal('consult')" class="block border-l-2 border-gold pl-3">DỊCH VỤ TƯ VẤN THIẾT KẾ NHÀ HÀNG TOÀN DIỆN...</a></li>
+                        <li><a href="javascript:void(0)" onclick="openServiceModal('trend')" class="block border-l-2 border-gold pl-3">XU HƯỚNG MẪU THIẾT KẾ NHÀ HÀNG THỊNH HÀNH...</a></li>
                     </ul>
                 </li>
                 <li><a href="#process" class="mobile-link block py-2 border-b">Quy trình</a></li>
@@ -176,39 +178,123 @@
         </section>
 
         <!-- QUY TRÌNH LÀM VIỆC -->
-        <section id="process" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-black uppercase tracking-widest text-gray-900">Quy trình chuyên nghiệp</h2>
-                    <div class="w-20 h-1 bg-gold mx-auto mt-4"></div>
+        <section id="process" class="py-20 bg-white relative">
+            <div class="absolute inset-0 bg-gray-50 opacity-50"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="text-center mb-20">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gold uppercase tracking-tight">
+                        Quy trình làm việc của Mạnh An
+                    </h2>
                 </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Steps 1-6 chi tiết như yêu cầu trước -->
-                    <div class="flex gap-4 p-6 bg-white rounded-2xl shadow-sm hover:bg-gold hover:text-white transition group">
-                        <div class="text-3xl font-black text-gold group-hover:text-white">01</div>
-                        <div><h4 class="font-bold uppercase mb-2">Tiếp nhận & Hẹn lịch</h4><p class="text-[10px] opacity-80">Ghi nhận yêu cầu & Hẹn khảo sát miễn phí tận nơi.</p></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-y-16 gap-x-4 mt-16">
+                    
+                    <!-- Bước 1 -->
+                    <div class="relative bg-white border border-gold rounded-[2rem] pt-14 pb-8 px-5 shadow-sm hover:shadow-lg transition-all duration-300">
+                        <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-white border border-gold rounded-full flex items-center justify-center shadow-md">
+                            <i class="fas fa-map-marker-alt text-gold text-3xl"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="inline-block bg-gold text-white px-8 py-1.5 rounded-full font-bold text-sm mb-6 shadow-sm">Bước 1</span>
+                            <h4 class="font-black text-gray-900 uppercase text-[13px] leading-tight mb-4 min-h-[40px] flex items-center justify-center">
+                                Tiếp nhận & Hẹn lịch
+                            </h4>
+                            <ul class="text-[12px] text-gray-600 text-left space-y-2 list-disc pl-4 leading-relaxed">
+                                <li>Ghi nhận yêu cầu (Loại hình, ngân sách, phong cách).</li>
+                                <li>Hẹn lịch khảo sát tư vấn miễn phí.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="flex gap-4 p-6 bg-white rounded-2xl shadow-sm hover:bg-gold hover:text-white transition group">
-                        <div class="text-3xl font-black text-gold group-hover:text-white">02</div>
-                        <div><h4 class="font-bold uppercase mb-2">Khảo sát & Ký HĐ TK</h4><p class="text-[10px] opacity-80">Đo đạc hiện trạng, tư vấn giải pháp tối ưu chi phí.</p></div>
+
+                    <!-- Bước 2 -->
+                    <div class="relative bg-white border border-gold rounded-[2rem] pt-14 pb-8 px-5 shadow-sm hover:shadow-lg transition-all duration-300">
+                        <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-white border border-gold rounded-full flex items-center justify-center shadow-md">
+                            <i class="fas fa-file-search text-gold text-3xl"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="inline-block bg-gold text-white px-8 py-1.5 rounded-full font-bold text-sm mb-6 shadow-sm">Bước 2</span>
+                            <h4 class="font-black text-gray-900 uppercase text-[13px] leading-tight mb-4 min-h-[40px] flex items-center justify-center">
+                                Khảo sát & Ký HĐ Thiết kế
+                            </h4>
+                            <ul class="text-[12px] text-gray-600 text-left space-y-2 list-disc pl-4 leading-relaxed">
+                                <li>Đo đạc hiện trạng, tư vấn giải pháp, tối ưu chi phí và công năng.</li>
+                                <li>Ký hợp đồng thiết kế.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="flex gap-4 p-6 bg-white rounded-2xl shadow-sm hover:bg-gold hover:text-white transition group">
-                        <div class="text-3xl font-black text-gold group-hover:text-white">03</div>
-                        <div><h4 class="font-bold uppercase mb-2">Thiết kế & Báo giá</h4><p class="text-[10px] opacity-80">Triển khai 2D/3D & Lập báo giá thi công chính xác.</p></div>
+
+                    <!-- Bước 3 -->
+                    <div class="relative bg-white border border-gold rounded-[2rem] pt-14 pb-8 px-5 shadow-sm hover:shadow-lg transition-all duration-300">
+                        <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-white border border-gold rounded-full flex items-center justify-center shadow-md">
+                            <i class="fas fa-paint-brush text-gold text-3xl"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="inline-block bg-gold text-white px-8 py-1.5 rounded-full font-bold text-sm mb-6 shadow-sm">Bước 3</span>
+                            <h4 class="font-black text-gray-900 uppercase text-[13px] leading-tight mb-4 min-h-[40px] flex items-center justify-center">
+                                Thiết kế & Báo giá chi tiết
+                            </h4>
+                            <ul class="text-[12px] text-gray-600 text-left space-y-2 list-disc pl-4 leading-relaxed">
+                                <li>Triển khai bản vẽ 2D/3D.</li>
+                                <li>Chỉnh sửa theo ý khách hàng.</li>
+                                <li>Báo giá thi công hoàn thiện chính xác.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="flex gap-4 p-6 bg-white rounded-2xl shadow-sm hover:bg-gold hover:text-white transition group">
-                        <div class="text-3xl font-black text-gold group-hover:text-white">04</div>
-                        <div><h4 class="font-bold uppercase mb-2">Ký hợp đồng thi công</h4><p class="text-[10px] opacity-80">Duyệt phối cảnh cuối & Ký kết thi công trọn gói.</p></div>
+
+                    <!-- Bước 4 -->
+                    <div class="relative bg-white border border-gold rounded-[2rem] pt-14 pb-8 px-5 shadow-sm hover:shadow-lg transition-all duration-300">
+                        <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-white border border-gold rounded-full flex items-center justify-center shadow-md">
+                            <i class="fas fa-newspaper text-gold text-3xl"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="inline-block bg-gold text-white px-8 py-1.5 rounded-full font-bold text-sm mb-6 shadow-sm">Bước 4</span>
+                            <h4 class="font-black text-gray-900 uppercase text-[13px] leading-tight mb-4 min-h-[40px] flex items-center justify-center">
+                                Ký Hợp đồng Thi công
+                            </h4>
+                            <ul class="text-[12px] text-gray-600 text-left space-y-2 list-disc pl-4 leading-relaxed">
+                                <li>Duyệt phối cảnh và chi tiết kỹ thuật.</li>
+                                <li>Thuyết minh phương án.</li>
+                                <li>Ký hợp đồng thi công.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="flex gap-4 p-6 bg-white rounded-2xl shadow-sm hover:bg-gold hover:text-white transition group">
-                        <div class="text-3xl font-black text-gold group-hover:text-white">05</div>
-                        <div><h4 class="font-bold uppercase mb-2">Sản xuất & Thi công</h4><p class="text-[10px] opacity-80">Sản xuất tại xưởng & Lắp đặt hoàn thiện công trình.</p></div>
+
+                    <!-- Bước 5 -->
+                    <div class="relative bg-white border border-gold rounded-[2rem] pt-14 pb-8 px-5 shadow-sm hover:shadow-lg transition-all duration-300">
+                        <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-white border border-gold rounded-full flex items-center justify-center shadow-md">
+                            <i class="fas fa-tools text-gold text-3xl"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="inline-block bg-gold text-white px-8 py-1.5 rounded-full font-bold text-sm mb-6 shadow-sm">Bước 5</span>
+                            <h4 class="font-black text-gray-900 uppercase text-[13px] leading-tight mb-4 min-h-[40px] flex items-center justify-center">
+                                Sản xuất và thi công
+                            </h4>
+                            <ul class="text-[12px] text-gray-600 text-left space-y-2 list-disc pl-4 leading-relaxed">
+                                <li>Cải tạo mặt bằng.</li>
+                                <li>Sản xuất nội thất tại xưởng.</li>
+                                <li>Vận chuyển và lắp đặt hoàn thiện.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="flex gap-4 p-6 bg-white rounded-2xl shadow-sm hover:bg-gold hover:text-white transition group">
-                        <div class="text-3xl font-black text-gold group-hover:text-white">06</div>
-                        <div><h4 class="font-bold uppercase mb-2">Bàn giao & Bảo hành</h4><p class="text-[10px] opacity-80">Nghiệm thu, bàn giao & Bảo hành sản phẩm 2 năm.</p></div>
+
+                    <!-- Bước 6 -->
+                    <div class="relative bg-white border border-gold rounded-[2rem] pt-14 pb-8 px-5 shadow-sm hover:shadow-lg transition-all duration-300">
+                        <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-white border border-gold rounded-full flex items-center justify-center shadow-md">
+                            <i class="fas fa-check-circle text-gold text-3xl"></i>
+                        </div>
+                        <div class="text-center">
+                            <span class="inline-block bg-gold text-white px-8 py-1.5 rounded-full font-bold text-sm mb-6 shadow-sm">Bước 6</span>
+                            <h4 class="font-black text-gray-900 uppercase text-[13px] leading-tight mb-4 min-h-[40px] flex items-center justify-center">
+                                Bàn giao & Bảo hành
+                            </h4>
+                            <ul class="text-[12px] text-gray-600 text-left space-y-2 list-disc pl-4 leading-relaxed">
+                                <li>Nghiệm thu công trình.</li>
+                                <li>Bàn giao chìa khoá trao tay.</li>
+                                <li>Thực hiện bảo hành và bảo trì.</li>
+                            </ul>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -232,27 +318,27 @@
         </section>
     </main>
 
-    <!-- FOOTER (3 Columns) -->
-    <footer class="bg-zinc-900 text-white pt-20 pb-10">
+    <!-- FOOTER (3 Columns with Green Background) -->
+    <footer class="bg-green-800 text-white pt-20 pb-10">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
                 <!-- Col 1: Logo & Company -->
                 <div>
-                    <img src="Data/Logo.png" class="h-16 mb-6 brightness-0 invert">
+                    <img src="Data/Logo.png" class="h-16 mx-auto md:mx-0 mb-6"> <!-- Đã bỏ invert để logo hiển thị màu gốc -->
                     <h5 class="text-gold font-bold uppercase text-lg mb-2">CÔNG TY TNHH XÂY DỰNG NỘI THẤT MẠNH AN</h5>
-                    <p class="text-xs text-zinc-400 tracking-[0.2em] italic uppercase mb-4">Đẳng Cấp Nội Thất Việt</p>
-                    <p class="text-[11px] text-zinc-500 mb-2">MST: 0108572813</p>
-                    <p class="text-[11px] text-zinc-200"><i class="fas fa-envelope text-gold mr-2"></i>Manhandesign.pkd80@gmail.com</p>
+                    <p class="text-sm text-gray-300 tracking-[0.2em] italic uppercase mb-4">Đẳng Cấp Nội Thất Việt</p>
+                    <p class="text-[11px] text-gray-400 mb-2">MST: 0108572813</p>
+                    <p class="text-[11px] text-gray-200"><i class="fas fa-envelope text-gold mr-2"></i>Manhandesign.pkd80@gmail.com</p>
                 </div>
                 
                 <!-- Col 2: North Branch -->
                 <div>
                     <h5 class="text-white font-bold uppercase mb-6 border-l-4 border-gold pl-4 tracking-widest">Chi nhánh miền bắc</h5>
-                    <p class="text-[13px] text-zinc-400 leading-relaxed mb-4">
+                    <p class="text-[13px] text-gray-300 leading-relaxed mb-4">
                         Số nhà 48, ngõ 99 phố Kiều Mai, Phường Phúc Diễn, Quận Bắc Từ Liêm, Hà Nội
                     </p>
-                    <div class="bg-zinc-800/50 p-4 rounded-lg">
-                        <p class="text-[10px] uppercase text-zinc-500 mb-1">Hotline miền bắc</p>
+                    <div class="bg-green-700 p-4 rounded-lg">
+                        <p class="text-[10px] uppercase text-gray-400 mb-1">Hotline miền bắc</p>
                         <a href="tel:0779157746" class="text-xl font-black text-gold hover:underline">0779.157.746</a>
                     </div>
                 </div>
@@ -260,17 +346,17 @@
                 <!-- Col 3: South Branch -->
                 <div>
                     <h5 class="text-white font-bold uppercase mb-6 border-l-4 border-gold pl-4 tracking-widest">Chi nhánh miền nam</h5>
-                    <p class="text-[13px] text-zinc-400 leading-relaxed mb-4">
+                    <p class="text-[13px] text-gray-300 leading-relaxed mb-4">
                         201/2 Mã Lò, KP10, Phường Bình Hưng Hòa, TP.HCM
                     </p>
-                    <div class="bg-zinc-800/50 p-4 rounded-lg">
-                        <p class="text-[10px] uppercase text-zinc-500 mb-1">Hotline miền nam</p>
+                    <div class="bg-green-700 p-4 rounded-lg">
+                        <p class="text-[10px] uppercase text-gray-400 mb-1">Hotline miền nam</p>
                         <a href="tel:0779162808" class="text-xl font-black text-gold hover:underline">0779.162.808</a>
                     </div>
                 </div>
             </div>
             
-            <div class="text-center pt-10 border-t border-zinc-800 text-[10px] text-zinc-600 tracking-[0.4em] uppercase">
+            <div class="text-center pt-10 border-t border-green-700 text-[10px] text-gray-400 tracking-[0.4em] uppercase">
                 © 2024 Manhandesign.com - Interior Perfection
             </div>
         </div>
@@ -329,7 +415,7 @@
             },
             'trend': {
                 title: "XU HƯỚNG MẪU THIẾT KẾ NHÀ HÀNG ĐẸP VÀ THỊNH HÀNH NHẤT",
-                content: `<p>Cập nhật các phong cách Minimalism, Modern Luxury đang là xu hướng 2024. Đổi mới vật liệu giúp công trình luôn mới mẻ và thu hút.</p>`,
+                content: `<p>Cập nhật những phong cách Minimalism, Industrial và Modern Luxury đang là xu hướng 2024. Đổi mới vật liệu giúp công trình luôn mới mẻ và thu hút.</p>`,
                 images: ["Data/DV1.jpg", "Data/DV4.jpg", "Data/DA06.jpg", "Data/DA03.jpg"]
             }
         };
